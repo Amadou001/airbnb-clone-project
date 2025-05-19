@@ -146,3 +146,44 @@ Reviews contribute to trust and transparency by allowing users to share their ex
 ### ⚙️ 7. Database Optimizations
 To enhance performance, indexing is used to speed up frequent queries, and caching mechanisms reduce database load.  
 These optimizations ensure the application scales effectively under high user demand.
+
+
+# API Security
+
+Securing the backend APIs is critical to ensure the integrity, confidentiality, and availability of user data and system resources. The following security measures will be implemented in this project:
+
+### 🔐 1. Authentication
+User authentication ensures that only registered users can access protected resources.  
+We implement token-based authentication (such as JWT) to verify user identities on every request.  
+**Why it matters:** Prevents unauthorized access to personal accounts, booking history, and sensitive actions.
+
+---
+
+### 🛡️ 2. Authorization
+Authorization defines what actions a user is allowed to perform after authentication.  
+Role-based access control (RBAC) ensures that only the right users (e.g., hosts vs. guests) can access or modify specific resources.  
+**Why it matters:** Prevents users from performing restricted operations like modifying others’ property listings or bookings.
+
+---
+
+### 🚫 3. Rate Limiting
+Rate limiting is used to restrict the number of API requests a user or IP address can make in a given time period.  
+This is crucial for protecting the application from abuse, brute-force attacks, or denial-of-service (DoS) attempts.  
+**Why it matters:** Helps maintain API performance and availability for all users.
+
+---
+
+### 🔒 4. Data Encryption
+All data transmitted between the client and server will be encrypted using HTTPS (TLS).  
+Sensitive fields like passwords and payment info are also securely hashed/stored.  
+**Why it matters:** Protects user credentials and payment details from being intercepted during transmission.
+
+---
+
+### 🧪 5. Input Validation & Sanitization
+All incoming data will be validated and sanitized to prevent injection attacks (e.g., SQL injection, XSS).  
+**Why it matters:** Ensures data integrity and protects the system from malicious input.
+
+---
+
+Implementing these security practices ensures that users can safely interact with the platform, trust the application with their data, and conduct transactions with confidence.
